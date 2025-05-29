@@ -1,0 +1,104 @@
+:root {
+  --bg-color: #f4f6f8;
+  --card-bg: #ffffff;
+  --text-color: #222;
+  --subtext-color: #666;
+  --btn-color: #007bff;
+  --btn-hover: #0056b3;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --card-bg: #2c2c2c;
+  --text-color: #f0f0f0;
+  --subtext-color: #bbbbbb;
+  --btn-color: #4dabf7;
+  --btn-hover: #228be6;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#toggle-mode {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.2s;
+}
+
+#toggle-mode:hover {
+  transform: scale(1.1);
+}
+
+#matches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.match {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.match:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.match strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--text-color);
+}
+
+.match em {
+  font-size: 0.85rem;
+  color: var(--subtext-color);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.match a {
+  text-decoration: none;
+  background-color: var(--btn-color);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.match a:hover {
+  background-color: var(--btn-hover);
+}
