@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/api/matches")
+fetch("https://sportsorca-backend.onrender.com/api/matches")
   .then(res => res.json())
   .then(matches => {
     console.log("Fetched matches:", matches);
