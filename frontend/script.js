@@ -1,9 +1,17 @@
+const container = document.getElementById("matches");
+const loader = document.getElementById("loading");
+
+// Show loading spinner
+loader.style.display = "block";
+container.innerHTML = "";
+
 fetch("https://sportsorca-backend.onrender.com/api/matches")
   .then(res => res.json())
   .then(matches => {
     console.log("Fetched matches:", matches);
 
-    const container = document.getElementById("matches");
+    // Hide spinner
+    loader.style.display = "none";
 
     if (!Array.isArray(matches) || matches.length === 0) {
       container.innerHTML = "<p>No matches found.</p>";
@@ -33,7 +41,7 @@ fetch("https://sportsorca-backend.onrender.com/api/matches")
   })
   .catch(err => {
     console.error("Error fetching matches:", err);
-    const container = document.getElementById("matches");
+    loader.style.display = "none";
     container.innerHTML = "<p>Failed to load matches. Please try again later.</p>";
   });
 
