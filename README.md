@@ -1,5 +1,9 @@
 # 🏟️ SportsOrca - Upcoming Matches Viewer
 
+**🔗 Live Demo:** [View on Vercel](https://sportsorca-matches.vercel.app)
+**🧠 Backend API:** [`/api/matches`](https://sportsorca-backend.onrender.com/api/matches)
+
+
 A full-stack web application to display upcoming soccer matches along with highlight videos, using data from the [ScoreBat API](https://www.scorebat.com/video-api/v3/).
 
 ## 🚀 Features
